@@ -18,11 +18,6 @@ amo_0 <- function(){
   b_url <- paste('http://www.cxsfdcglzx.com/', b_url, sep='')
   jilu <- Sys.time()
   
-  a2 <- htmlParse('http://www.cxsfdcglzx.com/touming/wangShangHouse.aspx', encoding='UTF-8')
-  b2_table <- readHTMLTable(a2, stringsAsFactors=F)
-  
-  
-  
   b1 <- cbind(b_table, jilu, b_url, stringsAsFactors=F)
   colnames(b1) <- c('项目名称','交易套数','交易面积','交易均价','交易时间','记录时间','链接')
   b1[, 1] <- as.character(b1[, 1])
